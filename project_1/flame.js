@@ -6,6 +6,7 @@ class Flame {
     this.vy = random(-2.5, -1);
     this.color = 255;
     this.size = 38
+    this.move = 0
   }
   finished() {
     return this.color < 0;

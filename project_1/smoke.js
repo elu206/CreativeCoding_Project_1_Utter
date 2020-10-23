@@ -1,9 +1,9 @@
 class Smoke{
   constructor() {
     this.x = width / 2;
-    this.y = 180;
+    this.y = 230;
     this.vx = random(-0.5, 0.5);
-    this.vy = random(-20, -1);
+    this.vy = random(-10, -1);
     this.alpha = 255;
   }
   finished() {
