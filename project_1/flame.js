@@ -7,6 +7,16 @@ class Flame {
     this.color = 255;
     this.size = 38
     this.move = 0
+    this.alpha = 255
+    if (counter >=10){
+      this.alpha-=100
+    }
+    if (counter >=11){
+      this.alpha-=100
+    }
+    if (counter >=12){
+      this.alpha-=55
+    }
   }
   finished() {
     return this.color < 0;
@@ -21,7 +31,7 @@ class Flame {
   }
   show() {
     noStroke();
-    fill(255, this.color, 0);
+    fill(255, this.color, 0, this.alpha);
     ellipse(this.x, this.y, this.size)
   }
 }

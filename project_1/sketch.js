@@ -31,10 +31,9 @@ function draw() {
       scale(size);
       glow();
       pop();
-
     }
 
-    if (counter >= 8 && counter <= 15){
+    if (counter >= 8 && counter <= 20){
       mySmoke();
     }
 
@@ -48,27 +47,16 @@ function draw() {
       burntMatch(burnlength);
     }
 
-    if (counter >= 3){
+    if (counter >= 3 && counter <= 12){
       if (counter >= 6 && counter <= 12){
         movedown += 0.5
       }
-      if (counter >= 12){
-        if (dieout > 0){
-          dieout -= 0.1
-        }
-      }
       push();
       translate(0, movedown);
-      scale(dieout);
       myFire();
       pop();
     }
-
-
-
   }
-
-
 }
 
 function myCounter(){
