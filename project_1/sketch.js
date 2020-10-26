@@ -36,9 +36,9 @@ function draw() {
     //text(counter, 20, 20); //to be deleted later, just for me to time things
     background(50);
     noStroke();
+    matchBox();
   }
   if (counter >= 0 && counter<= 29)
-    matchBox();
     if (counter >= 3){
       if (glowsize < 1 && counter < 8){
         glowsize += 0.005
