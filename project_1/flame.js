@@ -1,14 +1,13 @@
 class Flame {
   constructor() {
-    this.x = width / 2;
-    this.y = 245;
-    this.vx = random(-0.5, 0.5);
-    this.vy = random(-2.5, -1);
-    this.color = 255;
-    this.size = 38
-    this.move = 0
-    this.alpha = 255
-    if (counter >=10){
+    this.x = width / 2; //xpos
+    this.y = 245; //ypos
+    this.vx = random(-0.5, 0.5); //x velocity
+    this.vy = random(-2.5, -1); //y velocity
+    this.color = 255; //color value
+    this.size = 38 //size of particles
+    this.alpha = 255 //opacity
+    if (counter >=10){ //over time, fire dies out
       this.alpha-=100
     }
     if (counter >=11){
@@ -18,7 +17,7 @@ class Flame {
       this.alpha-=55
     }
   }
-  finished() {
+  done() {
     return this.color < 0;
   }
   update() {
@@ -29,7 +28,7 @@ class Flame {
       this.size -= 1
     }
   }
-  show() {
+  display() {
     noStroke();
     fill(255, this.color, 0, this.alpha);
     ellipse(this.x, this.y, this.size)
